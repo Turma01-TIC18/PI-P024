@@ -42,6 +42,11 @@ class Evento{
     virtual string dataEvento() = 0;
     virtual string localEvento() = 0;
     virtual string tipo_de_evento() = 0;
+    Evento(string _duracao) {
+        duracao = _duracao;
+        //return novoEvento(duracao);
+        //to-do
+    }
   
 
   
@@ -56,7 +61,6 @@ class Deslocamento : public Evento{
     public:
     string tipo;  
     string trajeto;
-
 
 };
 
@@ -73,7 +77,10 @@ class Pacote{
     string nome;
     vector<Evento*> eventos;
     
-    Pacote (string _nome, string _eventos);
+    Pacote (string _nome, vector<Evento>* eventos) {
+        nome = _nome;
+        Evento* novoEvento;
+    }
     //Método de permissão de cadastro de eventos
     void adicionaEvento(Evento* _evento){
         eventos.push_back(_evento);
@@ -94,9 +101,8 @@ class Pacote{
 
 
 int main (){
-Pacote pct1();
-
-
+    Pacote pc1("praia", "30min");
+    
 
 
 return 0;
