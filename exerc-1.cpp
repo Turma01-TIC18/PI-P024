@@ -5,25 +5,12 @@
 using namespace std;
 
 class Evento {
-    public:
-        string nome;
-        string descricao;
-
-        Evento(string _nome, string _descricao) {
-            nome = _nome;
-            descricao = _descricao;
-        }
+    //implementar
     
 };
 
 class Roteiro : public Evento {
-    public:
-        vector<string> destinos;
-        
-        Roteiro(string _nome, string _descricao, vector<string> _destinos)
-            : Evento(_nome, _descricao) {
-                destinos = _destinos;
-        }
+    //implementar
     
 };
 
