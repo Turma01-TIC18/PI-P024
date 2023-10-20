@@ -28,12 +28,28 @@ class Roteiro : public Evento {
 };
 
 class Deslocamento : public Evento {
-   //implementar
+    public:
+        string meioDeTransporte;
+
+        Deslocamento(string _nome, string _descricao, string _meioDeTransporte)
+            : Evento(_nome, _descricao) {
+                meioDeTransporte = _meioDeTransporte;
+            }
         
 };
 
 class Pernoite : public Evento {
-   //implementar
+    public:
+        string hotel;
+        string dataCheckin;
+        string dataCheckout;
+
+        Pernoite(string _nome, string _descricao, string _hotel, string _dataCheckin, string _dataCheckout)
+            : Evento(_nome, _descricao) {
+                hotel = _hotel;
+                dataCheckin = _dataCheckin;
+                dataCheckout = _dataCheckout;
+            }
         
 };
 
