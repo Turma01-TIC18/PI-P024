@@ -54,12 +54,27 @@ class Pernoite : public Evento {
 };
 
 class Dependente {
-    //implementar
+    public:
+        string nome;
+        int idade;
+
+        Dependente(string _nome, int _idade) {
+            nome = _nome;
+            idade = _idade;
+        }
 
 };
 
 class Pacote {
-    //implementar
+    public:
+        string nome;
+        string descricao;
+        vector<Evento*> eventos; 
+
+        Pacote(string _nome, string _descricao) {
+            nome = _nome;
+            descricao = _descricao;
+        }
     
 };
 
