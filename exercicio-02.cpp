@@ -193,9 +193,9 @@ public:
 };
 
 int main() {
-    AgenciaViagens agencia;
 
-    
+    AgenciaViagens agencia;
+ 
     agencia.cadastrarEvento(new Roteiro("Roteiro 10", "Descrição do roteiro 10", {"Destino 10", "Destino 20"}));
     agencia.cadastrarEvento(new Deslocamento("Deslocamento 10", "Descrição do deslocamento 10", "Avião"));
     agencia.cadastrarEvento(new Pernoite("Pernoite UM", "Descrição da pernoite UM", "Hotel Paraíso", "2023-10-18", "2023-10-22"));
@@ -211,9 +211,7 @@ int main() {
     cliente10->adicionarDependente(dependente1);
     cliente10->adicionarDependente(dependente2);
 
-    
     agencia.venderPacote(cliente10, pacote10, "2023-10-18");
-
     
     cout << "Clientes: " << endl;
     for (Cliente* cliente : agencia.listarClientes()) {
@@ -247,7 +245,6 @@ int main() {
     }
 
     cout << " " << endl;
-    
    
 
     return 0;
